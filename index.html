@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alisson Rezende — Corretor de Imóveis em Curitiba e Fazenda Rio Grande | CRECI 53621-PR</title>
+<meta name="description" content="Alisson Rezende, corretor de imóveis em Curitiba e Fazenda Rio Grande/PR. Casas e sobrados com tour em vídeo, atendimento direto no WhatsApp e ajuda com financiamento. CRECI 53621-PR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#101216;
+    --panel:#181B21;
+    --panel2:#1F232B;
+    --paper:#F6F5F2;
+    --white:#FFFFFF;
+    --ink:#191C21;
+    --muted:#5D636E;
+    --muted-d:#A7ADB8;
+    --acc:#FF6A2B;
+    --acc-dark:#E0521A;
+    --wa:#1FAF57;
+    --wa-dark:#178A44;
+    --line:rgba(25,28,33,.12);
+    --line-d:rgba(255,255,255,.12);
+    --shadow:0 18px 40px rgba(16,18,22,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:'Sora',system-ui,sans-serif;font-weight:700;line-height:1.18;letter-spacing:-.01em}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--acc-dark);margin-bottom:14px}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--acc);border-radius:2px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.98rem;padding:15px 26px;border-radius:999px;text-decoration:none;transition:.25s;border:1px solid transparent;cursor:pointer}
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 24px rgba(31,175,87,.32)}
+  .btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px)}
+  .btn-acc{background:var(--acc);color:#fff;box-shadow:0 10px 24px rgba(255,106,43,.35)}
+  .btn-acc:hover{background:var(--acc-dark);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--acc);color:var(--acc-dark)}
+  .btn-ghost-d{background:transparent;color:#fff;border-color:var(--line-d)}
+  .btn-ghost-d:hover{border-color:var(--acc);color:var(--acc)}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(16,18,22,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-d)}
+  .header-in{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .mono{width:46px;height:46px;flex:none;border-radius:13px;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:1rem;color:#fff;background:linear-gradient(140deg,var(--acc),var(--acc-dark))}
+  .brand-txt strong{display:block;font-family:'Sora',sans-serif;font-size:1.08rem;line-height:1.1}
+  .brand-txt span{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-d)}
+  .header-cta{padding:11px 18px;font-size:.88rem}
+  @media(max-width:560px){.header-cta span{display:none}.header-cta{padding:11px 14px}}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(1100px 520px at 85% -10%,rgba(255,106,43,.22),transparent 60%),linear-gradient(165deg,#14161B,#0C0E11)}
+  .hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:38px;padding:54px 0 62px;align-items:center}
+  .hero .eyebrow{color:var(--acc)}
+  .hero h1{color:#fff;font-size:clamp(2.1rem,6vw,3.35rem);margin-bottom:16px}
+  .hero h1 em{font-style:normal;color:var(--acc)}
+  .hero p.lead{font-size:1.06rem;color:#C9CED7;max-width:560px;margin-bottom:28px}
+  .hero p.lead strong{color:#fff}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+  @media(min-width:880px){.hero-in{grid-template-columns:1.05fr .95fr;padding:78px 0 86px}}
+
+  /* Moldura de vídeo (visual do hero) */
+  .video-frame{position:relative;border-radius:22px;background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line-d);box-shadow:0 30px 60px rgba(0,0,0,.45);padding:20px;color:#fff}
+  .vf-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .vf-live{display:inline-flex;align-items:center;gap:7px;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FFD9C7}
+  .vf-live i{width:8px;height:8px;border-radius:50%;background:var(--acc);display:inline-block}
+  .vf-rec{font-size:.72rem;color:var(--muted-d);font-weight:600;letter-spacing:.08em}
+  .vf-screen{position:relative;border-radius:16px;background:radial-gradient(420px 220px at 50% 0%,rgba(255,106,43,.16),transparent 70%),#101216;border:1px solid var(--line-d);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .vf-play{width:74px;height:74px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(255,106,43,.45)}
+  .vf-play svg{width:30px;height:30px;margin-left:4px}
+  .vf-house{position:absolute;left:16px;bottom:14px;font-size:.72rem;font-weight:600;color:#D8DCE3;background:rgba(255,255,255,.08);padding:6px 11px;border-radius:999px}
+  .vf-bar{height:5px;border-radius:99px;background:rgba(255,255,255,.14);overflow:hidden;margin-bottom:14px}
+  .vf-bar i{display:block;height:100%;width:38%;background:var(--acc);border-radius:99px}
+  .vf-title{font-family:'Sora',sans-serif;font-weight:700;font-size:1.02rem;margin-bottom:3px}
+  .vf-sub{font-size:.86rem;color:var(--muted-d)}
+  .vf-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .vf-tags span{font-size:.72rem;font-weight:600;color:#E8EAED;background:rgba(255,255,255,.07);border:1px solid var(--line-d);padding:6px 11px;border-radius:999px}
+
+  /* Trust bar */
+  .trust{background:var(--acc);color:#fff}
+  .trust-in{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 20px;padding:22px 0;text-align:center}
+  .trust b{display:block;font-family:'Sora',sans-serif;font-size:.98rem}
+  .trust small{font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;opacity:.88}
+  @media(min-width:880px){.trust-in{grid-template-columns:repeat(4,1fr)}}
+
+  /* Sections */
+  section.bloco{padding:64px 0}
+  .sec-head{max-width:660px;margin-bottom:36px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head.center .eyebrow::before{display:none}
+  .sec-head h2{font-size:clamp(1.7rem,4.4vw,2.4rem);margin-bottom:10px}
+  .sec-head p{color:var(--muted)}
+  .cards{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:760px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1020px){.cards.four{grid-template-columns:repeat(4,1fr)}.cards.three{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:0 6px 18px rgba(16,18,22,.05)}
+  .card .ico{width:46px;height:46px;border-radius:12px;background:#FFF0E7;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .card .ico svg{width:23px;height:23px;stroke:var(--acc-dark)}
+  .card h3{font-size:1.1rem;margin-bottom:7px}
+  .card p{font-size:.94rem;color:var(--muted)}
+  .sec-cta{margin-top:30px;text-align:center}
+  @media(min-width:760px){.sec-cta{text-align:left}.sec-cta.center{text-align:center}}
+
+  /* Tours em vídeo (destaque escuro) */
+  .tours{background:linear-gradient(165deg,#171A20,#0E1013);color:#EFF1F4}
+  .tours .eyebrow{color:var(--acc)}
+  .tours .sec-head p{color:#B9BFC9}
+  .tours .card{background:rgba(255,255,255,.045);border-color:var(--line-d);box-shadow:none}
+  .tours .card h3{color:#fff}
+  .tours .card p{color:#B9BFC9}
+  .tours .card .ico{background:rgba(255,106,43,.16)}
+  .tours .card .ico svg{stroke:var(--acc)}
+
+  /* Destaques */
+  .spot{border-radius:20px;overflow:hidden;background:var(--white);border:1px solid var(--line);box-shadow:0 8px 22px rgba(16,18,22,.06);display:flex;flex-direction:column}
+  .spot-head{padding:22px 24px 0}
+  .spot .tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-dark);background:#FFF0E7;padding:6px 11px;border-radius:999px;margin-bottom:12px}
+  .spot h3{font-size:1.14rem;margin-bottom:7px}
+  .spot p{font-size:.94rem;color:var(--muted);padding:0 24px 22px}
+  .spot .playline{display:flex;align-items:center;gap:10px;margin:0 24px 22px;padding-top:16px;border-top:1px solid var(--line);font-size:.86rem;font-weight:600;color:var(--ink)}
+  .spot .playline .pl{width:34px;height:34px;flex:none;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center}
+  .spot .playline .pl svg{width:14px;height:14px;margin-left:2px}
+
+  /* Vender */
+  .vender{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  /* Passos */
+  .steps{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px 24px}
+  .step .num{font-family:'Sora',sans-serif;font-weight:800;font-size:1.9rem;color:var(--acc);line-height:1;display:block;margin-bottom:12px}
+  .step h3{font-size:1.08rem;margin-bottom:7px}
+  .step p{font-size:.94rem;color:var(--muted)}
+
+  /* Sobre */
+  .sobre{background:#ECEAE5}
+  .sobre-in{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
+  @media(min-width:880px){.sobre-in{grid-template-columns:.9fr 1.1fr}}
+  .sobre-card{background:var(--bg);color:#fff;border-radius:22px;padding:30px 28px;box-shadow:var(--shadow)}
+  .sobre-card .mono{width:60px;height:60px;font-size:1.3rem;border-radius:16px;margin-bottom:18px}
+  .sobre-card h3{font-size:1.25rem;margin-bottom:4px}
+  .sobre-card p{color:var(--muted-d);font-size:.92rem}
+  .sobre-card .creci{display:inline-block;margin-top:16px;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FFD9C7;border:1px solid rgba(255,106,43,.45);padding:7px 12px;border-radius:999px}
+  .sobre h2{font-size:clamp(1.7rem,4.4vw,2.3rem);margin-bottom:12px}
+  .sobre p{color:#4C5158;margin-bottom:14px}
+
+  /* FAQ */
+  .faq{max-width:760px;margin:0 auto}
+  details{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+  summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:'Sora',sans-serif;font-size:1.35rem;color:var(--acc);line-height:1}
+  details[open ] summary::after{content:"–"}
+  details p{margin-top:10px;color:var(--muted);font-size:.95rem}
+
+  /* CTA final */
+  .cta-final{background:radial-gradient(800px 400px at 50% 0%,rgba(255,106,43,.20),transparent 65%),linear-gradient(165deg,#171A20,#0C0E11);text-align:center;color:#fff}
+  .cta-final .eyebrow{color:var(--acc)}
+  .cta-final .eyebrow::before{display:none}
+  .cta-final h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:12px}
+  .cta-final p{color:#B9BFC9;max-width:540px;margin:0 auto 26px}
+
+  footer{background:#0B0C0F;color:#9AA1AC;padding:38px 0 30px;font-size:.9rem}
+  .foot-in{display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center}
+  footer strong{color:#fff;font-family:'Sora',sans-serif;font-size:1.05rem}
+  footer a{color:var(--acc);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .foot-mini{margin-top:14px;font-size:.76rem;opacity:.7}
+
+  /* Flutuante */
+  .float-wa{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(31,175,87,.42);transition:.25s}
+  .float-wa:hover{transform:scale(1.07);background:var(--wa-dark)}
+  .float-wa svg{width:30px;height:30px}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="wrap header-in">
+    <a class="brand" href="#">
+      <span class="mono">AR</span>
+      <span class="brand-txt">
+        <strong>Alisson Rezende</strong>
+        <span>Corretor de Imóveis · Curitiba/PR</span>
+      </span>
+    </a>
+    <a class="btn btn-wa header-cta" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Vim%20pela%20sua%20p%C3%A1gina%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.58 1.74-1.14.27-.56.27-1.04.19-1.14-.08-.1-.23-.16-.48-.29z"/></svg>
+      <span>Falar no WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow">Corretor de Imóveis · Curitiba e Fazenda Rio Grande</span>
+      <h1>Conheça seu próximo imóvel <em>em vídeo</em>, antes de sair de casa.</h1>
+      <p class="lead">Sou o Alisson Rezende, corretor em <strong>Curitiba e Fazenda Rio Grande</strong>. Gravo um <strong>tour em vídeo</strong> de cada imóvel que vendo — você conhece a casa de verdade pelo celular e só visita pessoalmente o que fizer sentido.</p>
+      <div class="hero-btns">
+        <a class="btn btn-wa" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Estou%20procurando%20um%20im%C3%B3vel%20para%20comprar%20em%20Curitiba%20ou%20Fazenda%20Rio%20Grande%20e%20quero%20a%20sua%20ajuda." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm4.52 11.87c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.58 1.74-1.14.27-.56.27-1.04.19-1.14-.08-.1-.23-.16-.48-.29z"/></svg>
+          Quero comprar
+        </a>
+        <a class="btn btn-acc" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Quero%20receber%20os%20tours%20em%20v%C3%ADdeo%20dos%20im%C3%B3veis%20que%20voc%C3%AA%20est%C3%A1%20vendendo." target="_blank" rel="noopener">
+          Receber os tours em vídeo
+        </a>
+      </div>
+    </div>
+    <div class="video-frame" aria-hidden="true">
+      <div class="vf-top">
+        <span class="vf-live"><i></i> Tour do imóvel</span>
+        <span class="vf-rec">REC · @alissonrezend</span>
+      </div>
+      <div class="vf-screen">
+        <span class="vf-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+        <span class="vf-house">🏠 Fazenda Rio Grande · PR</span>
+      </div>
+      <div class="vf-bar"><i></i></div>
+      <div class="vf-title">Tour completo, cômodo por cômodo</div>
+      <div class="vf-sub">É assim que eu apresento cada imóvel: em vídeo, sem filtro e sem enrolação.</div>
+      <div class="vf-tags"><span>Casas térreas</span><span>Sobrados</span><span>Condomínio fechado</span><span>Área gourmet</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Barra de confiança ===== -->
+<div class="trust">
+  <div class="wrap trust-in">
+    <div><b>CRECI 53621-PR</b><small>Corretor credenciado</small></div>
+    <div><b>Curitiba e região</b><small>Fazenda Rio Grande e Campo de Santana</small></div>
+    <div><b>Tour em vídeo</b><small>De cada imóvel à venda</small></div>
+    <div><b>Atendimento direto</b><small>Você fala com o Alisson</small></div>
+  </div>
+</div>
+
+<!-- ===== Tours em vídeo (diferencial) ===== -->
+<section class="bloco tours" id="tours">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">O diferencial</span>
+      <h2>Imóvel se conhece em vídeo — não em anúncio parado</h2>
+      <p>Foto bonita todo anúncio tem. Eu vou até o imóvel, gravo o tour completo e te mostro como ele é de verdade: cada cômodo, cada detalhe, sem surpresa na visita.</p>
+    </div>
+    <div class="cards four">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg></div>
+        <h3>Tour completo em vídeo</h3>
+        <p>Gravo e apresento cada imóvel pessoalmente, cômodo por cômodo — você sente o tamanho e o acabamento antes de agendar qualquer visita.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <h3>Receba no seu WhatsApp</h3>
+        <p>Os tours chegam direto no seu celular. Viu algo que combina com você? Um toque e a gente já conversa sobre a visita.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Visita só no que vale a pena</h3>
+        <p>Nada de perder o sábado vendo imóvel que não tem nada a ver. Você visita pessoalmente só os que passaram no seu critério pelo vídeo.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3>Conteúdo que ensina</h3>
+        <p>No meu Instagram eu explico o que ninguém te conta antes de comprar: matrícula, escritura, ITBI, FGTS e financiamento — pra você não perder dinheiro por falta de informação.</p>
+      </div>
+    </div>
+    <div class="sec-cta">
+      <a class="btn btn-acc" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Quero%20receber%20os%20tours%20em%20v%C3%ADdeo%20dos%20im%C3%B3veis%20que%20voc%C3%AA%20est%C3%A1%20vendendo." target="_blank" rel="noopener">Quero receber os tours no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quero comprar ===== -->
+<section class="bloco" id="comprar">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Quero comprar</span>
+      <h2>Sair do aluguel ou trocar de casa? Começa aqui</h2>
+      <p>Você me conta o que procura e quanto pode investir — entrada e parcela. Eu faço a busca em Curitiba, Fazenda Rio Grande e região e te mando os tours que combinam com você.</p>
+    </div>
+    <div class="cards four">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg></div>
+        <h3>Curadoria pra você</h3>
+        <p>Seleciono as opções que cabem no seu bolso e no seu momento de vida — sem te entupir de anúncio que não serve.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></div>
+        <h3>Visitas acompanhadas</h3>
+        <p>Agendo e vou com você em cada visita, mostrando os pontos fortes e o que merece atenção em cada casa.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></div>
+        <h3>Financiamento sem mistério</h3>
+        <p>Simulo com você os cenários de financiamento (Price e SAC), explico o uso do FGTS e quanto de entrada você precisa — antes de você se comprometer com qualquer coisa.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Segurança até a escritura</h3>
+        <p>Confira comigo matrícula, certidões e cada etapa da papelada. Comprar o primeiro imóvel não precisa ser um salto no escuro.</p>
+      </div>
+    </div>
+    <div class="sec-cta">
+      <a class="btn btn-wa" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Estou%20procurando%20um%20im%C3%B3vel%20para%20comprar%20em%20Curitiba%20ou%20Fazenda%20Rio%20Grande%20e%20quero%20a%20sua%20ajuda." target="_blank" rel="noopener">Começar minha busca no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Imóveis em destaque ===== -->
+<section class="bloco" id="destaques" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Imóveis em destaque</span>
+      <h2>O que eu estou vendendo agora</h2>
+      <p>Trabalho principalmente com casas e sobrados em Fazenda Rio Grande e Curitiba. A disponibilidade muda rápido — me chama que eu te passo o que está aberto hoje, com o tour em vídeo de cada um.</p>
+    </div>
+    <div class="cards three">
+      <div class="spot">
+        <div class="spot-head">
+          <span class="tag">Fazenda Rio Grande</span>
+          <h3>Casas térreas — Eucaliptos e Gralha Azul</h3>
+        </div>
+        <p>Casas prontas pra morar, muitas com área gourmet e suíte, em bairros que crescem rápido e ficam a minutos de Curitiba.</p>
+        <div class="playline"><span class="pl"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5v13l11-6.5z"/></svg></span> Tour em vídeo de cada casa</div>
+      </div>
+      <div class="spot">
+        <div class="spot-head">
+          <span class="tag">Condomínio fechado</span>
+          <h3>Sobrados em condomínio fechado</h3>
+        </div>
+        <p>Sobrados modernos com acabamento de alto padrão, portaria e lazer — segurança e conforto pra família, em Fazenda Rio Grande.</p>
+        <div class="playline"><span class="pl"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5v13l11-6.5z"/></svg></span> Tour em vídeo de cada sobrado</div>
+      </div>
+      <div class="spot">
+        <div class="spot-head">
+          <span class="tag">Curitiba e região</span>
+          <h3>Casas e sobrados — Curitiba e Campo de Santana</h3>
+        </div>
+        <p>Opções em Curitiba e na região metropolitana pra quem quer morar bem ou investir — eu seleciono conforme o seu perfil e orçamento.</p>
+        <div class="playline"><span class="pl"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5v13l11-6.5z"/></svg></span> Tour em vídeo de cada imóvel</div>
+      </div>
+    </div>
+    <div class="sec-cta">
+      <a class="btn btn-wa" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Vim%20pela%20sua%20p%C3%A1gina%20e%20quero%20saber%20quais%20im%C3%B3veis%20voc%C3%AA%20tem%20dispon%C3%ADveis%20agora." target="_blank" rel="noopener">Consultar disponibilidade no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quero vender ===== -->
+<section class="bloco vender" id="vender">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Quero vender</span>
+      <h2>Seu imóvel merece um tour — não só uma foto</h2>
+      <p>Quem anuncia comigo ganha o mesmo tratamento que você vê no meu Instagram: eu vou até o seu imóvel, gravo o tour em vídeo e levo ele até os compradores certos.</p>
+    </div>
+    <div class="cards four">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20v-6M11 20V9M16 20v-9M21 20V4"/><path d="m5 9 4.5-3L14 8.5 19 5"/></svg></div>
+        <h3>Avaliação do seu imóvel</h3>
+        <p>Análise do valor de mercado na sua região, pra anunciar pelo preço certo — nem abaixo do que vale, nem fora da realidade.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
+        <h3>Tour em vídeo profissional</h3>
+        <p>Gravo o tour completo do seu imóvel, do mesmo jeito que faço com todos que vendo. Comprador que assiste ao tour chega na visita muito mais decidido.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21c-2.5-2.6-3.9-5.7-3.9-9S9.5 5.6 12 3z"/></svg></div>
+        <h3>Divulgação ativa</h3>
+        <p>Seu imóvel divulgado no meu Instagram e direto no WhatsApp de quem está procurando comprar na sua região.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Acompanhamento total</h3>
+        <p>Cuido das visitas, das propostas e da papelada com você, até a assinatura. Você acompanha tudo pelo WhatsApp.</p>
+      </div>
+    </div>
+    <div class="sec-cta">
+      <a class="btn btn-acc" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Tenho%20um%20im%C3%B3vel%20e%20quero%20uma%20avalia%C3%A7%C3%A3o%20para%20vender." target="_blank" rel="noopener">Pedir a avaliação do meu imóvel</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Como funciona ===== -->
+<section class="bloco" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Simples, do começo ao fim</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Você chama no WhatsApp</h3>
+        <p>Me conta o que procura — ou o imóvel que quer vender. A primeira conversa é sem compromisso.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Você assiste aos tours</h3>
+        <p>Te mando os vídeos dos imóveis no seu perfil. Você conhece cada casa pelo celular e escolhe quais visitar.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Você fecha com segurança</h3>
+        <p>Visita acompanhada, proposta conduzida e documentação conferida de perto, até a assinatura e as chaves na mão.</p>
+      </div>
+    </div>
+    <div class="sec-cta center">
+      <a class="btn btn-wa" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Vim%20pela%20sua%20p%C3%A1gina%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Conversar com o Alisson agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Sobre ===== -->
+<section class="bloco sobre" id="sobre">
+  <div class="wrap sobre-in">
+    <div class="sobre-card">
+      <span class="mono">AR</span>
+      <h3>Alisson Rezende</h3>
+      <p>Corretor de Imóveis — Curitiba, Fazenda Rio Grande e região metropolitana</p>
+      <span class="creci">CRECI 53621-PR</span>
+    </div>
+    <div>
+      <span class="eyebrow">Sobre mim</span>
+      <h2>Prazer, eu sou o Alisson Rezende</h2>
+      <p>Sou corretor de imóveis (CRECI 53621-PR) e atendo Curitiba, Fazenda Rio Grande e a região metropolitana. Fiquei conhecido pelo jeito que apresento os imóveis: <strong>tour em vídeo, um por um</strong>, mostrando a casa como ela é.</p>
+      <p>Também produzo conteúdo pra ajudar quem está comprando o primeiro imóvel a não cair em armadilha: explico documentação, financiamento e FGTS de um jeito simples, porque sei que é assim que muita gente perde dinheiro sem perceber.</p>
+      <p>Aqui você não fala com equipe nem com robô: fala direto comigo, em todas as etapas — da primeira mensagem à entrega das chaves.</p>
+      <a class="btn btn-wa" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Vim%20pela%20sua%20p%C3%A1gina%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar comigo no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="bloco" id="faq">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Perguntas de quem chega aqui</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Quais regiões você atende?</summary>
+        <p>Atendo Curitiba, Fazenda Rio Grande e a região metropolitana — com bastante atuação em bairros como Eucaliptos e Gralha Azul (Fazenda Rio Grande) e Campo de Santana (Curitiba). Se a sua busca for em outro bairro da região, me chama que a gente conversa.</p>
+      </details>
+      <details>
+        <summary>Como recebo os tours em vídeo dos imóveis?</summary>
+        <p>Simples: me chama no WhatsApp e me conta o que você procura. Eu te mando os tours dos imóveis que combinam com o seu perfil — e os novos que forem entrando.</p>
+      </details>
+      <details>
+        <summary>Você ajuda com financiamento e FGTS?</summary>
+        <p>Ajudo, sim. Simulamos juntos os cenários de financiamento (Price e SAC), vemos quanto de entrada você precisa e como usar o seu FGTS na compra — tudo explicado antes de qualquer compromisso.</p>
+      </details>
+      <details>
+        <summary>Quero vender meu imóvel. Você grava o tour dele também?</summary>
+        <p>Gravo. Quem anuncia comigo tem o imóvel apresentado em vídeo, do mesmo jeito que você vê no meu Instagram — é o formato que mais gera visita de comprador decidido.</p>
+      </details>
+      <details>
+        <summary>Como falo com você?</summary>
+        <p>Direto pelo WhatsApp (41) 99856-4942 ou pelo Instagram @alissonrezend. Quem responde sou eu mesmo.</p>
+      </details>
+    </div>
+    <div class="sec-cta center">
+      <a class="btn btn-ghost" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Tenho%20uma%20d%C3%BAvida%20sobre%20comprar%20ou%20vender%20um%20im%C3%B3vel." target="_blank" rel="noopener">Tirar outra dúvida no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA final ===== -->
+<section class="bloco cta-final">
+  <div class="wrap">
+    <span class="eyebrow">Vamos conversar?</span>
+    <h2>Seu próximo imóvel está<br>a um vídeo de distância.</h2>
+    <p>Me chama no WhatsApp, me conta o que você procura e receba os tours. Sem compromisso — quem sabe a sua casa não é a próxima que eu vou filmar?</p>
+    <a class="btn btn-wa" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Vim%20pela%20sua%20p%C3%A1gina%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm4.52 11.87c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.58 1.74-1.14.27-.56.27-1.04.19-1.14-.08-.1-.23-.16-.48-.29z"/></svg>
+      Chamar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ===== Rodapé ===== -->
+<footer>
+  <div class="wrap foot-in">
+    <strong>Alisson Rezende — Corretor de Imóveis</strong>
+    <span>CRECI 53621-PR · Curitiba, Fazenda Rio Grande e região metropolitana</span>
+    <span>WhatsApp: <a href="https://wa.me/5541998564942" target="_blank" rel="noopener">(41) 99856-4942</a> · Instagram: <a href="https://instagram.com/alissonrezend" target="_blank" rel="noopener">@alissonrezend</a></span>
+    <span class="foot-mini">Conheça seu próximo imóvel em vídeo, antes de sair de casa.</span>
+  </div>
+</footer>
+
+<!-- ===== Botão flutuante ===== -->
+<a class="float-wa" href="https://wa.me/5541998564942?text=Ol%C3%A1%2C%20Alisson!%20Vim%20pela%20sua%20p%C3%A1gina%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar com o Alisson no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.58 1.74-1.14.27-.56.27-1.04.19-1.14-.08-.1-.23-.16-.48-.29z"/></svg>
+</a>
+
+</body>
+</html>
